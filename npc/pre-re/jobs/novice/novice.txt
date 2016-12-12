@@ -287,7 +287,9 @@ new_1-1,53,114,4	script	Shion#nv1	727,{
 		mes "[Shion]";
 		mes "Hello there~";
 		mes "Welcome to the";
-		mes "Training Grounds!";
+		mes "Training Grounds! Haaaaaaa~";
+		mes "Or.. should I say...";
+		mes "'The Remembering Grounds!'";
 		next;
 		mes "[Shion]";
 		mes "Let's see.";
@@ -295,76 +297,128 @@ new_1-1,53,114,4	script	Shion#nv1	727,{
 		mes "" + strcharinfo(0) + ".";
 		next;
 		mes "[Shion]";
-		mes "My name is Shion.";
-		mes "Yes, this is the first time we've met, of course. Hahahaha~!";
+		mes "My name is Shion. or did you know that already?";
+		mes "Yes, this is the first time we've met or.. probably not, of course. Hahahaha~!";
 		next;
-		mes "[Shion]";
-		mes "Now that we've met, is there anything I can help you with?";
-		mes "I'm here for your questions~";
-		next;
-		switch(select("Where should I go?:About Basic Interfaces.:Who the crap are you?")) {
-		case 1:
-			mes "[Shion]";
-			mes "Do you see the bridge to your";
-			mes "right side? Just cross the bridge and you'll arrive at a castle. All you have to do is walk inside!";
-			next;
-			mes "[Shion]";
-			mes "The entrance of the castle";
-			mes "is a ^4D4DFFspinning white light^000000. These portals are what allow you to move from one zone to another.";
-			next;
-			mes "[Shion]";
-			mes "Do you know how to move?";
-			mes "Left click on a spot, and you'll walk over to that spot. Piece of cake, huh?";
-			next;
-			mes "[Shion]";
-			mes "So go for it!";
-			mes "Basically, you must enter the castle in order to start your adventures.";
-			next;
-			mes "[Shion]";
-			mes "There are soldiers";
-			mes "at the entrance, so don't";
-			mes "worry about getting lost.";
-			mes "Take care now~!";
-			set nov_1st_cos,1;
-			close;
-		case 2:
-			mes "[Shion]";
-			mes "Basic Interfaces...";
-			mes "Do you know what Click, Double-click and Drag mean?";
-			next;
-			mes "[Shion]";
-			mes "When you press the";
-			mes "left Mouse button once,";
-			mes "that is a click. When you press the mouse button twice in a row, that's a double-click.";
-			next;
-			mes "[Shion]";
-			mes "Dragging is when you move your Mouse while holding down the";
-			mes "Mouse button after clicking on something.";
-			next;
-			mes "[Shion]";
-			mes "Before we start talking about";
-			mes "the Basic Interfaces, you should remember these terms, just because we'll be using them frequently.";
-			next;
-			mes "[Shion]";
-			mes "Inside the castle, there is a Basic Interfaces Tutor who can teach you the basics more clearly, okay? Enter the castle to start your training.";
-			next;
-			mes "[Shion]";
-			mes "The entrance";
-			mes "of the castle is";
-			mes "a ^4D4DFFspinning white light^000000.";
-			next;
-			mes "[Shion]";
-			mes "There are soldiers";
-			mes "at the entrance, so don't";
-			mes "worry about getting lost.";
-			mes "Take care now~!";
-			set nov_1st_cos,1;
-			close;
-		case 3:
-			mes "[Shion]";
-			mes "Me? I'm Shion!";
-			mes "But that's a rude way of asking! I'm volunteering my time and effort here, so you've got to show me a little bit of respect at least!";
-			set nov_1st_cos,2;
+		switch(select("Yes, I've met you before.:No, we haven't met.")) {
+			case 1:
+				mes "[Shion]";
+				mes "Ohh really?";
+				mes "I think I remember you now, I can see that you are a...";
+				next;
+				switch(select("Lord Knight:High Priest:High Wizard:Whitesmith:Sniper:Assassin Cross:Paladin:Champion:Professor:Stalker:Creator:" + ((Sex == 1) ? "Clown" : "Gypsy"))) {
+					case 1:
+						jobchange 4008;
+					close;
+					case 2:
+						jobchange 4009;
+					close;
+					case 3:
+						jobchange 4010;
+					close;
+					case 4:
+						jobchange 4011;
+					close;
+					case 5:
+						jobchange 4012;
+					close;
+					case 6:
+						jobchange 4013;
+					close;
+					case 7:
+						jobchange 4015;
+					close;
+					case 8:
+						jobchange 4016;
+					close;
+					case 9:
+						jobchange 4017;
+					close;
+					case 10:
+						jobchange 4018;
+					close;
+					case 11:
+						jobchange 4019;
+					close;
+					case 12:
+						if(Sex == 1) {
+							jobchange 4020;
+						} else {
+							jobchange 4021;
+						}
+					close;
+				}
+			case 2:
+				mes "[Shion]";
+				mes "I see. Are you sure? Haha~. Nevermind then!";
+				mes "Now that we've met, is there anything I can help you with?";
+				mes "I'm here for your questions~";
+				next;
+				switch(select("Where should I go?:About Basic Interfaces.:Who the crap are you?")) {
+					case 1:
+						mes "[Shion]";
+						mes "Do you see the bridge to your";
+						mes "right side? Just cross the bridge and you'll arrive at a castle. All you have to do is walk inside!";
+						next;
+						mes "[Shion]";
+						mes "The entrance of the castle";
+						mes "is a ^4D4DFFspinning white light^000000. These portals are what allow you to move from one zone to another.";
+						next;
+						mes "[Shion]";
+						mes "Do you know how to move?";
+						mes "Left click on a spot, and you'll walk over to that spot. Piece of cake, huh?";
+						next;
+						mes "[Shion]";
+						mes "So go for it!";
+						mes "Basically, you must enter the castle in order to start your adventures.";
+						next;
+						mes "[Shion]";
+						mes "There are soldiers";
+						mes "at the entrance, so don't";
+						mes "worry about getting lost.";
+						mes "Take care now~!";
+						set nov_1st_cos,1;
+					close;
+					case 2:
+						mes "[Shion]";
+						mes "Basic Interfaces...";
+						mes "Do you know what Click, Double-click and Drag mean?";
+						next;
+						mes "[Shion]";
+						mes "When you press the";
+						mes "left Mouse button once,";
+						mes "that is a click. When you press the mouse button twice in a row, that's a double-click.";
+						next;
+						mes "[Shion]";
+						mes "Dragging is when you move your Mouse while holding down the";
+						mes "Mouse button after clicking on something.";
+						next;
+						mes "[Shion]";
+						mes "Before we start talking about";
+						mes "the Basic Interfaces, you should remember these terms, just because we'll be using them frequently.";
+						next;
+						mes "[Shion]";
+						mes "Inside the castle, there is a Basic Interfaces Tutor who can teach you the basics more clearly, okay? Enter the castle to start your training.";
+						next;
+						mes "[Shion]";
+						mes "The entrance";
+						mes "of the castle is";
+						mes "a ^4D4DFFspinning white light^000000.";
+						next;
+						mes "[Shion]";
+						mes "There are soldiers";
+						mes "at the entrance, so don't";
+						mes "worry about getting lost.";
+						mes "Take care now~!";
+						set nov_1st_cos,1;
+					close;
+					case 3:
+						mes "[Shion]";
+						mes "Me? I'm Shion!";
+						mes "But that's a rude way of asking! I'm volunteering my time and effort here, so you've got to show me a little bit of respect at least!";
+						set nov_1st_cos,2;
+					close;
+				}
 			close;
 		}
 	}
