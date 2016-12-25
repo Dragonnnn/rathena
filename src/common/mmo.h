@@ -21,10 +21,7 @@
 // see conf/battle/client.conf for other version
 
 #ifndef PACKETVER
-	//#define PACKETVER 20151104
-	//#define PACKETVER 20150916
-	#define PACKETVER 20150513
-	//#define PACKETVER 20130807
+	#define PACKETVER 20130807
 	//#define PACKETVER 20120410
 #endif
 

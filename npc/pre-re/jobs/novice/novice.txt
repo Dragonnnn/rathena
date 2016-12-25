@@ -302,70 +302,52 @@ new_1-1,53,114,4	script	Shion#nv1	727,{
 		next;
 		switch(select("Yes, I've met you before.:No, we haven't met.")) {
 			case 1:
-				if(BaseLevel == 1 && Class == Job_Novice) {
-					mes "[Shion]";
-					mes "Ohh really? Hahaha...~";
-					mes "I think I remember you now, I can see that you are a...";
-					next;
-					switch(select("Lord Knight:High Priest:High Wizard:Whitesmith:Sniper:Assassin Cross:Paladin:Champion:Professor:Stalker:Creator:" + ((Sex == 1) ? "Clown" : "Gypsy"))) {
-						case 1:
-							jobchange 4008;
-						break;
-						case 2:
-							jobchange 4009;
-						break;
-						case 3:
-							jobchange 4010;
-						break;
-						case 4:
-							jobchange 4011;
-						break;
-						case 5:
-							jobchange 4012;
-						break;
-						case 6:
-							jobchange 4013;
-						break;
-						case 7:
-							jobchange 4015;
-						break;
-						case 8:
-							jobchange 4016;
-						break;
-						case 9:
-							jobchange 4017;
-						break;
-						case 10:
-							jobchange 4018;
-						break;
-						case 11:
-							jobchange 4019;
-						break;
-						case 12:
-							if(Sex == 1) {
-								jobchange 4020;
-							} else {
-								jobchange 4021;
-							}
-						break;
-					}
-					
-					set BaseLevel,90;
-					set JobLevel,70;
-					resetskill();
-					set SkillPoint,127;
-					set nov_1st_cos,3; 
-					warp "prontera",151,181;
-				} else {
-					mes "[Shion]";
-					mes "Listen, you don't seem to belong here!";
-					mes "Get out of here!";
-					next;
-					warp "prontera",151,181;
+				mes "[Shion]";
+				mes "Ohh really?";
+				mes "I think I remember you now, I can see that you are a...";
+				next;
+				switch(select("Lord Knight:High Priest:High Wizard:Whitesmith:Sniper:Assassin Cross:Paladin:Champion:Professor:Stalker:Creator:" + ((Sex == 1) ? "Clown" : "Gypsy"))) {
+					case 1:
+						jobchange 4008;
+					close;
+					case 2:
+						jobchange 4009;
+					close;
+					case 3:
+						jobchange 4010;
+					close;
+					case 4:
+						jobchange 4011;
+					close;
+					case 5:
+						jobchange 4012;
+					close;
+					case 6:
+						jobchange 4013;
+					close;
+					case 7:
+						jobchange 4015;
+					close;
+					case 8:
+						jobchange 4016;
+					close;
+					case 9:
+						jobchange 4017;
+					close;
+					case 10:
+						jobchange 4018;
+					close;
+					case 11:
+						jobchange 4019;
+					close;
+					case 12:
+						if(Sex == 1) {
+							jobchange 4020;
+						} else {
+							jobchange 4021;
+						}
 					close;
 				}
-				close;
-			break;
 			case 2:
 				mes "[Shion]";
 				mes "I see. Are you sure? Haha~. Nevermind then!";
@@ -437,7 +419,7 @@ new_1-1,53,114,4	script	Shion#nv1	727,{
 						set nov_1st_cos,2;
 					close;
 				}
-			break;
+			close;
 		}
 	}
 }
